@@ -1,0 +1,212 @@
+@import 'base';
+
+/* Colors */
+$purple: hsl(274, 53%, 37%);
+$navyblue: hsl(238, 50%, 13%);
+$mint: hsl(180, 50%, 60%);
+$lightmint: hsl(187, 52%, 88%);
+$white: hsl(0, 0%, 100%);
+$grayblue: hsl(225, 26%, 88%);
+
+.navbar {
+  /* Class scoped Sass variable */
+  $height: 70px; // Scoped variable
+  align-items: center;
+  background-color: $white;
+  border-bottom: 3px solid $grayblue;
+  display: flex;
+  height: $height;
+
+  &::before {
+    content: ' ';
+    border-top: 2px solid $purple;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+  .logo {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 1rem;
+
+    img {
+      height: calc(100% - 1.5rem);
+      width: auto;
+    }
+  }
+  .nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .menu-item {
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    color: darken(desaturate($purple, 30%), 20%);
+    display: flex;
+    flex-grow: 1;
+    height: $height;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $grayblue;
+      border-bottom: $purple; //????????????????
+      cursor: pointer;
+    }
+
+    &.active {
+      border-bottom: 3px solid hsl(278, 28%, 45%);
+    }
+  }
+}
+.hiddenOnMobile {
+  display: none;
+}
+footer {
+  background-color: $navyblue; /* The color for the background */
+  padding: 10px;
+  position: relative;
+  bottom: -550px;
+  clear: both; /* This will separate the footer from another elements */
+  .footerImg {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    /* This is the style for the Copyright */
+    text-align: center;
+    color: $mint;
+    font-size: 0.8rem;
+    margin: 0;
+    clear: both;
+    margin-top: 10px;
+  }
+}
+
+.contentMobile {
+  background-image: url(images/backMobile.jpg); /*  Image under the Main Banner */
+  background-repeat: no-repeat; /* I need this image just ones */
+  background-size: 100%; /* Image will cover the background from side to side */
+  height: 100%; //???
+  width: 100%;
+  position: absolute;
+  clear: both;
+  background-color: $navyblue;
+  .words {
+    color: $purple;
+    font-size: 1.6rem;
+    float: right;
+    background: linear-gradient(90deg, $mint, $white, $mint);
+    width: 65%;
+    padding: 13px 20px;
+    position: relative;
+    top: 270px;
+    margin-bottom: 15px;
+  }
+}
+table {
+  /* The size and space for the table */
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: left;
+
+  th {
+    /* The first row */
+    background-color: $navyblue;
+    border: 2px solid $mint;
+    color: $mint;
+  }
+  tbody td {
+    // All other text cells
+    color: $purple;
+  }
+  th,
+  td {
+    /* The size and border for cells */
+    border: 1px solid $navyblue;
+    min-width: 80px;
+  }
+  th,
+  td,
+  tr {
+    /* The space inside each cell */
+    padding: 10px;
+  }
+
+  tr:nth-child(odd) {
+    background: linear-gradient(90deg, $mint, $white);
+  }
+  tr:nth-child(even) {
+    background-color: $lightmint;
+  }
+}
+.col-container {
+  width: 100%; /* The size for the main container */
+  margin: 0 auto; /* Centering the container */
+  .right > p {
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+}
+form {
+  background-color: $navyblue; /* The background color for my form */
+  margin: 25px 0; /* The margin around the form */
+  padding: 15px 15px 30px 15px; /* The space inside the form */
+  label {
+    display: block; /* In my mobile version labels must be in block */
+    color: $white;
+    background-color: $navyblue;
+    /* The background-color for my labels */
+    padding: 5px 0;
+    /* The space inside my labels */
+  }
+  input[type='text'],
+  textarea {
+    width: 100%;
+    height: 40px;
+    /* In mobile and tablet version the width of the text areas must be 100% */
+    border: none; /* I do not need its borders */
+    background: linear-gradient(90deg, $mint, $white, $mint);
+    font-size: 1.2rem;
+    /* The size of the text areas */
+  }
+  input[type='text']:focus,
+  textarea:focus {
+    background: $mint; /* The color of the background will be changed for a lightgreen when you are typing */
+  }
+  fieldset {
+    border: none;
+    /* No borders for the fieldsets */
+  }
+  input[type='submit'] {
+    /* The color for the Submit-button */
+    background: linear-gradient(90deg, $navyblue, #92278f, $navyblue);
+    cursor: pointer; /* The cursor will change its view */
+    color: $white;
+    padding: 0.5rem; /* The size for the Submit-button */
+    float: right; /* The place for the Submit-button */
+    font-size: 1rem;
+    /* The size for the text on the Submit-button */
+    font-weight: bold;
+    width: 50%;
+    outline: none; //??????
+  }
+  textarea {
+    /* The height for the textarea */
+    height: 70px;
+  }
+}
