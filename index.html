@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <title>Yanina Tuyman Midterm Project</title>
 </head>
 
 <body>
   <div class="navbar">
     <div class="logo">
-      <img src="images/logoMoonHair.png" alt="Logo Moon Hair">
+      <img src="img/logoMoonHair.png" alt="Logo Moon Hair">
     </div>
     <nav class="nav">
       <div class="menu-item"><a href="index.html">Home</a></div>
@@ -21,60 +23,47 @@
     </nav>
   </div>
 
-  <div class="contentMobile">
-    <div class="words">Haircut</div>
-    <div class="words">Hairdying</div>
-    <div class="words">Styling</div>
+  <div class="baner">
+    <img src="img/backLaptop.jpg" alt="banner1">
   </div>
 
-  <div class="col-container clearfix picture">
-    <div class="col3 clearfix hiddenOnMobile">
+  <div class="contentMobile">
+    <!-- The img tag for browsers that do not support picture element default image for lowest common breakpoint -->
+    <img src="img/backMobile.jpg" alt="Hairdying">
+
+    <div class="word1">Haircut</div>
+    <div class="word2">Hairdying</div>
+    <div class="word3">Styling</div>
+  </div>
+
+  <div class="container3img">
+    <div class="col3">
       <!-- Inside this div I'm going to put an image -->
-      <picture>
-        <!-- There is no picture in mobile size -->
-        <!-- This source is for the full screen size -->
-        <source media="(min-width: 768px)" srcset="img/haircut.jpg">
-        <!-- The img tag for browsers that do not support picture element default image for lowest common breakpoint -->
-        <img src="img/haircut.jpg" alt="Haircut">
-      </picture>
+      <img src="img/haircut.jpg" alt="Haircut">
       <h2>Haircut</h2>
       <p>Any types of haircuts, including cutting with hot scissors and a razor</p>
     </div>
 
-    <div class="col3 clearfix hiddenOnMobile">
+    <div class="col3">
       <!-- Inside this div I'm going to put an image -->
-      <picture>
-        <!-- There is no picture in mobile size -->
-        <!-- This source is for the full screen size -->
-        <source media="(min-width: 768px)" srcset="img/hairdying.jpg">
-        <!-- The img tag for browsers that do not support picture element default image for lowest common breakpoint -->
-        <img src="img/hairdying.jpg" alt="Hairdying">
-      </picture>
+      <img src="img/hairdying.jpg" alt="Hairdying">
       <h2>Hairdying</h2>
       <p>Highlighting, multycoloring, traditional monochrome coloring of the hair</p>
     </div>
 
-    <div class="col3 clearfix hiddenOnMobile">
+    <div class="col3">
       <!-- Inside this div I'm going to put an image -->
-      <picture>
-        <!-- There is no picture in mobile size -->
-        <!-- This source is for the full screen size -->
-        <source media="(min-width: 768px)" srcset="img/styling.jpg">
-        <!-- The img tag for browsers that do not support picture element default image for lowest common breakpoint -->
-        <img src="img/styling.jpg" alt="Styling">
-      </picture>
+      <img src="img/styling.jpg" alt="Styling">
       <h2>Styling</h2>
       <p>Working with a stylist, choosing a haircut, image and color</p>
     </div>
 
-
-
   </div>
   <footer>
     <div class="footerImg">
-      <img src="images/logoF.png" alt="Fasebook Icon">
-      <img src="images/iconsTw.png" alt="Twitter Icon">
-      <img src="images/logoIn.png" alt="Instagram Icon">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram""></i>
+      <i class=" fab fa-twitter-square"></i>
     </div>
     <p>&copy; Moon Hair. All Rights Reserved. Designed by Yanina Tuyman</p> <!-- Copirights -->
 

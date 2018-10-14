@@ -1,5 +1,7 @@
+@import 'normalize';
 @import 'base';
 
+/* Global Sass variables */
 /* Colors */
 $purple: hsl(274, 53%, 37%);
 $navyblue: hsl(238, 50%, 13%);
@@ -7,10 +9,16 @@ $mint: hsl(180, 50%, 60%);
 $lightmint: hsl(187, 52%, 88%);
 $white: hsl(0, 0%, 100%);
 $grayblue: hsl(225, 26%, 88%);
+$pink: hsl(340, 77%, 48%);
+
+body {
+  max-width: 1800px;
+  margin: 0 auto;
+}
 
 .navbar {
   /* Class scoped Sass variable */
-  $height: 70px; // Scoped variable
+  $height: 70px;
   align-items: center;
   background-color: $white;
   border-bottom: 3px solid $grayblue;
@@ -34,6 +42,10 @@ $grayblue: hsl(225, 26%, 88%);
     img {
       height: calc(100% - 1.5rem);
       width: auto;
+      @media screen and (min-width: 500px) {
+        // height: 100%;
+        margin-left: 10px;
+      }
     }
   }
   .nav {
@@ -59,27 +71,29 @@ $grayblue: hsl(225, 26%, 88%);
 
     &:hover {
       background-color: $grayblue;
-      border-bottom: $purple; //????????????????
+      border-bottom: 2px solid $purple;
       cursor: pointer;
     }
 
     &.active {
       border-bottom: 3px solid hsl(278, 28%, 45%);
+      background-color: $grayblue; //??? not working
     }
   }
 }
-.hiddenOnMobile {
-  display: none;
-}
+
 footer {
   background-color: $navyblue; /* The color for the background */
   padding: 10px;
-  position: relative;
-  bottom: -550px;
-  clear: both; /* This will separate the footer from another elements */
   .footerImg {
+    /* These are Social Media Icons */
     display: flex;
     justify-content: center;
+    .fab {
+      font-size: 2.5rem;
+      margin: 10px;
+      color: $white;
+    }
   }
   p {
     /* This is the style for the Copyright */
@@ -93,82 +107,164 @@ footer {
 }
 
 .contentMobile {
-  background-image: url(images/backMobile.jpg); /*  Image under the Main Banner */
+  background-image: url(img/backMobile.jpg); /*  Image under the Main Banner */
   background-repeat: no-repeat; /* I need this image just ones */
   background-size: 100%; /* Image will cover the background from side to side */
   height: 100%; //???
   width: 100%;
-  position: absolute;
-  clear: both;
-  background-color: $navyblue;
-  .words {
+  position: relative;
+  // margin: 0 0 30px 0;
+  padding: 0 0 45px 0;
+  background: $navyblue;
+  z-index: -1;
+  @media screen and (min-width: 500px) {
+    background-color: transparent;
+    display: none;
+    //height: auto;
+  }
+  .word1,
+  .word2,
+  .word3 {
     color: $purple;
+    background: linear-gradient(90deg, $mint, $white, $mint);
     font-size: 1.6rem;
     float: right;
-    background: linear-gradient(90deg, $mint, $white, $mint);
     width: 65%;
     padding: 13px 20px;
-    position: relative;
-    top: 270px;
+    position: absolute;
+    z-index: 3;
     margin-bottom: 15px;
+    @media screen and (min-width: 500px) {
+      display: none;
+    }
+  }
+  .word1 {
+    top: 40%;
+    left: 50%;
+  }
+  .word2 {
+    top: 55%;
+    left: 50%;
+  }
+  .word3 {
+    top: 70%;
+    left: 50%;
   }
 }
-table {
-  /* The size and space for the table */
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  text-align: left;
 
-  th {
-    /* The first row */
-    background-color: $navyblue;
-    border: 2px solid $mint;
-    color: $mint;
-  }
-  tbody td {
-    // All other text cells
-    color: $purple;
-  }
-  th,
-  td {
-    /* The size and border for cells */
-    border: 1px solid $navyblue;
-    min-width: 80px;
-  }
-  th,
-  td,
-  tr {
-    /* The space inside each cell */
-    padding: 10px;
-  }
-
-  tr:nth-child(odd) {
-    background: linear-gradient(90deg, $mint, $white);
-  }
-  tr:nth-child(even) {
-    background-color: $lightmint;
-  }
-}
-.col-container {
-  width: 100%; /* The size for the main container */
+.container3img {
   margin: 0 auto; /* Centering the container */
-  .right > p {
-    padding: 20px;
+  width: 100%;
+  @media screen and (min-width: 500px) {
+    display: flex;
+    justify-content: row;
+  }
+  .col2 {
+    /* Two Column Equal Spaced Layout */
+    width: 100%; /* The width for the columns */
+    justify-content: center;
+    transition: 600ms all ease-in; /* Resizing will be more smooth. */
+    h1 {
+      font-size: 1.5rem;
+      background-color: $navyblue;
+      @media screen and (min-width: 500px) {
+        color: $pink;
+        background: none;
+        text-align: left;
+        padding-left: 30px;
+      }
+    }
+  }
+  table {
+    /* The size and space for the table */
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: left;
+    box-shadow: 5px 5px 15px;
+    @media screen and (min-width: 500px) {
+      width: 80%;
+    }
+    th {
+      /* The first row */
+      background-color: $navyblue;
+      border: 2px solid $mint;
+      color: $mint;
+    }
+    tbody td {
+      /* All other text cells */
+      color: $purple;
+    }
+    th,
+    td {
+      /* The size and border for cells */
+      min-width: 80px;
+    }
+    th,
+    td,
+    tr {
+      /* The space inside each cell */
+      padding: 10px;
+    }
+
+    tr:nth-child(odd) {
+      background: linear-gradient(90deg, $mint, $white);
+    }
+    tr:nth-child(even) {
+      background-color: $lightmint;
+    }
+  }
+  .left > p {
+    margin-top: 80px;
+    font-size: 1.2rem;
+  }
+  p {
+    padding-left: 30px;
     font-size: 1.2rem;
     line-height: 2rem;
     font-weight: 500;
+    @media screen and (min-width: 500px) {
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
   }
 }
+.col3 {
+  overflow: hidden; /* Overflow is hiding protruding parts of images */
+  text-align: center;
+  width: 100%;
+  transition: 600ms all ease-in; /* Resizing will be more smooth. */
+  flex-grow: 1;
+  @media screen and (min-width: 500px) {
+    width: 30%;
+    padding: 30px;
+  }
+  h2 {
+    margin: 0;
+    color: $purple;
+    background: linear-gradient(90deg, $mint, $white, $mint);
+  }
+  p {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
 form {
   background-color: $navyblue; /* The background color for my form */
   margin: 25px 0; /* The margin around the form */
-  padding: 15px 15px 30px 15px; /* The space inside the form */
+  padding: 15px; /* The space inside the form */
+  @media screen and (min-width: 500px) {
+    margin: 25px;
+    margin-bottom: 80px;
+  }
   label {
     display: block; /* In my mobile version labels must be in block */
-    color: $white;
+    color: $mint;
     background-color: $navyblue;
     /* The background-color for my labels */
     padding: 5px 0;
@@ -197,16 +293,36 @@ form {
     background: linear-gradient(90deg, $navyblue, #92278f, $navyblue);
     cursor: pointer; /* The cursor will change its view */
     color: $white;
-    padding: 0.5rem; /* The size for the Submit-button */
+    border: 1px solid $white;
+    padding: 0.7rem; /* The size for the Submit-button */
     float: right; /* The place for the Submit-button */
-    font-size: 1rem;
+    font-size: 1.2rem;
     /* The size for the text on the Submit-button */
-    font-weight: bold;
+    font-weight: medium;
+    margin-right: 12px;
     width: 50%;
-    outline: none; //??????
+    //border: none;
   }
   textarea {
     /* The height for the textarea */
     height: 70px;
+  }
+}
+
+picture,
+img {
+  width: 100%; /* The size of the pictures */
+  display: flex;
+  justify-content: row;
+  @media screen and (min-width: 500px) {
+    display: flex;
+    justify-content: row;
+  }
+}
+
+.baner {
+  display: none;
+  @media screen and (min-width: 500px) {
+    display: inline-block;
   }
 }
