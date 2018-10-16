@@ -12,181 +12,291 @@ $grayblue: hsl(225, 26%, 88%);
 $pink: hsl(340, 77%, 48%);
 
 body {
-  max-width: 1800px;
-  margin: 0 auto;
+  max-width: 1400px; /* Max width for the Descktop view */
+  margin: 0 auto; /* Centering the body */
+  a {
+    text-decoration: none; /* No underlined links in my case */
+  }
 }
 
 .navbar {
-  /* Class scoped Sass variable */
-  $height: 70px;
-  align-items: center;
-  background-color: $white;
-  border-bottom: 3px solid $grayblue;
-  display: flex;
+  /* Navigational bar */
+  $height: 70px; /* The height for the Navigation on the mobile view */
+  align-items: center; /* Centering the items in the navbar */
+  background-color: $white; /* Color for the background */
+  border-bottom: 3px solid $grayblue; /* The line under the navbar */
+  display: flex; /* Flex layout */
   height: $height;
+  @media screen and (min-width: 560px) {
+    height: 90px; /* The height for the Navigation on the tablet view */
+  }
+  @media screen and (min-width: 1024px) {
+    height: 100px; /* The height for the Navigation on the descktop view */
+  }
 
   &::before {
     content: ' ';
-    border-top: 2px solid $purple;
     position: absolute;
-    top: 0px;
+    top: 0px; /* No space on the top */
     width: 100%;
   }
   .logo {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
+    /* Container for the Logo */
+    align-items: center; /* Centering the logo in its contaner */
+    display: flex; /* Flex layout */
+    flex-grow: 1; /* The elements grow to fill the size of their container */
     height: 100%;
-    padding-left: 1rem;
+    padding-left: 1rem; /* The space on the left side of the logo */
 
     img {
-      height: calc(100% - 1.5rem);
-      width: auto;
-      @media screen and (min-width: 500px) {
-        // height: 100%;
-        margin-left: 10px;
+      /* The Logo */
+      height: 40px; /* The height for the logo */
+      width: auto; /* The width for the logo will be auto */
+      @media screen and (min-width: 560px) {
+        margin-left: 10px; /* I need more space on the left */
+        height: 50px; /* The height for the logo on the tablet view */
+      }
+      @media screen and (min-width: 1024px) {
+        height: 60px; /* The height for the logo on the descktop view */
       }
     }
   }
   .nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
+    /* The Menu */
+    display: flex; /* Flex layout */
+    flex-grow: 1; /* The elements grow to fill the size of their container */
+    justify-content: space-between; /* The space between menu-items */
+    align-items: center; /* Centering the items */
     height: 100%;
+    @media screen and (min-width: 560px) {
+      max-width: 450px; /* The width of the menu on the tablet view */
+    }
   }
   .menu-item {
-    align-items: center;
+    /* The words in the Menu */
+    align-items: center; /* Centering the items */
     border-bottom: 2px solid transparent;
-    color: darken(desaturate($purple, 30%), 20%);
-    display: flex;
-    flex-grow: 1;
-    height: $height;
-    justify-content: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    display: flex; /* Flex layout */
+    flex-grow: 1; /* The elements grow to fill the size of their container */
+    height: 100%;
+    justify-content: center; /* Centering the items */
+    letter-spacing: 0.5px; /* More space between the words */
+    text-transform: uppercase; /* Style for the words */
     a {
-      text-decoration: none;
+      /* Psudo class will be applied by the browser when the element is hovered */
+      &:hover {
+        color: $pink; /* Pink color on the hover style */
+      }
+      @media screen and (min-width: 560px) {
+        padding-top: 30px; /* I need more space on the top */
+        font-size: 1.3rem; /* The size of the "menu-words" on the tablet view */
+      }
+      @media screen and (min-width: 1024px) {
+        padding-top: 40px; /* I need more space on the top */
+        font-size: 1.5rem; /* The size of the "menu-words" on the tablet view */
+      }
     }
-
+    /* Psudo class will be applied by the browser when the element is hovered */
     &:hover {
-      background-color: $grayblue;
-      border-bottom: 2px solid $purple;
-      cursor: pointer;
+      background-color: $grayblue; /* Gray-blue color for the background on the hover style */
+      border-bottom: 2px solid $purple; /* Purple color for the border on the hover style */
+      cursor: pointer; /* The cursor will be changed on the hover */
     }
 
+    /* Psudo class will be applied by the browser when element is clicked */
+    &:active,
+    /* Regular class added/removed by javascript written on HTML page */
     &.active {
-      border-bottom: 3px solid hsl(278, 28%, 45%);
-      background-color: $grayblue; //??? not working
+      border-color: $mint;
     }
   }
 }
 
 footer {
+  /* Footer */
   background-color: $navyblue; /* The color for the background */
-  padding: 10px;
-  .footerImg {
-    /* These are Social Media Icons */
-    display: flex;
-    justify-content: center;
-    .fab {
-      font-size: 2.5rem;
-      margin: 10px;
-      color: $white;
+  padding: 10px; /* The space inside the footer */
+  justify-content: center; /* Centering the items */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Vertical layout for the items */
+  align-items: center; /* Centering the items */
+  clear: both;
+  font-size: 0.8rem; /* The size for the text */
+  .fab {
+    /* Social Media Icons */
+    font-size: 2.5rem; /* The size for the social media icons */
+    margin: 10px 15px; /* The space around the icons */
+    color: $mint; /* The color for the social media icons */
+    justify-content: center; /* Centering the items */
+    text-align: center; /* Centering the text */
+    @media screen and (min-width: 560px) {
+      margin: 10px 20px; /* I need more space around the icons on the tablet view */
+    }
+    @media screen and (min-width: 1024px) {
+      margin: 10px 30px; /* I need more space around the icons on the descktop view */
     }
   }
   p {
     /* This is the style for the Copyright */
-    text-align: center;
-    color: $mint;
-    font-size: 0.8rem;
-    margin: 0;
-    clear: both;
-    margin-top: 10px;
+    text-align: center; /* Centering the text */
+    line-height: 1rem; /* The size for the text */
+    color: $mint; /* The color for the text */
+    margin-top: 10px; /* I need more space on the top */
+  }
+  a {
+    /* This is the style for the Back-to-Top arrow */
+    color: #92278f; /* The color for the arrow */
+    font-size: 2rem; /* The size for the arrow */
+    margin: 10px; /* The space around the arrow */
   }
 }
 
 .contentMobile {
-  background-image: url(img/backMobile.jpg); /*  Image under the Main Banner */
+  /* This image and three words will be visible just on the mobile view */
+  background-image: url(img/backMobile.jpg); /* Image under the Menu */
   background-repeat: no-repeat; /* I need this image just ones */
   background-size: 100%; /* Image will cover the background from side to side */
-  height: 100%; //???
+  height: 100%;
   width: 100%;
-  position: relative;
-  // margin: 0 0 30px 0;
-  padding: 0 0 45px 0;
-  background: $navyblue;
-  z-index: -1;
-  @media screen and (min-width: 500px) {
+  position: relative; /* I have words on the top of the image. This is the positioning the items */
+  padding: 0 0 45px 0; /* The space around */
+  background: $navyblue; /* Blue color for the background */
+  @media screen and (min-width: 560px) {
     background-color: transparent;
-    display: none;
-    //height: auto;
+    display: none; /* This picture will be visible just on mobile view */
   }
   .word1,
   .word2,
   .word3 {
-    color: $purple;
+    color: $purple; /* The space around */
+    /* Gradient for the background */
     background: linear-gradient(90deg, $mint, $white, $mint);
-    font-size: 1.6rem;
-    float: right;
-    width: 65%;
-    padding: 13px 20px;
-    position: absolute;
-    z-index: 3;
-    margin-bottom: 15px;
-    @media screen and (min-width: 500px) {
-      display: none;
+    font-size: 1.6rem; /* The size for the text */
+    float: right; /* The layout for the text */
+    width: 65%; /* The size for the block */
+    padding: 13px 20px; /* The space inside the element */
+    position: absolute; /* I have words on the top of the image. This is the positioning the items */
+    margin-bottom: 15px; /* Extra space on the bottom */
+    left: 50%; /* The position */
+    @media screen and (min-width: 560px) {
+      display: none; /* These words will be visible just on mobile view */
     }
   }
   .word1 {
-    top: 40%;
-    left: 50%;
+    top: 40%; /* Layout for the first word */
   }
   .word2 {
-    top: 55%;
-    left: 50%;
+    top: 55%; /* Layout for the second word */
   }
   .word3 {
-    top: 70%;
-    left: 50%;
+    top: 70%; /* Layout for the third word */
   }
 }
-
-.container3img {
+.container2img {
+  /* The main container for two columns layout  */
   margin: 0 auto; /* Centering the container */
   width: 100%;
-  @media screen and (min-width: 500px) {
-    display: flex;
-    justify-content: row;
+  @media screen and (min-width: 560px) {
+    display: flex; /* Flex layout */
   }
-  .col2 {
+  .twoColumns {
     /* Two Column Equal Spaced Layout */
     width: 100%; /* The width for the columns */
-    justify-content: center;
-    transition: 600ms all ease-in; /* Resizing will be more smooth. */
+    transition: 600ms all ease-in; /* Resizing will be smoother. */
+    @media screen and (min-width: 560px) {
+      padding: 0 0 0 20px; /* I need more space around on the tablet view */
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 70px; /* I need more space around on the descktop view */
+    }
+
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* Size for the text */
       background-color: $navyblue;
-      @media screen and (min-width: 500px) {
-        color: $pink;
-        background: none;
-        text-align: left;
-        padding-left: 30px;
+      @media screen and (min-width: 560px) {
+        color: $pink; /* Another color on the tablet view */
+        background: none; /* No background on the tablet view */
+        padding-left: 30px; /* I need more space around on the tablet view */
+      }
+      @media screen and (min-width: 1024px) {
+        font-size: 1.7rem; /* Size for the text on the descktop view */
       }
     }
   }
+  form {
+    /* This is the style for the Contact Form */
+    background-color: $navyblue;
+    /* The background color for my form */
+    margin: 25px; /* The margin around the form */
+    padding: 15px;
+    /* The space inside the form */
+    @media screen and (min-width: 560px) {
+      margin: 25px 0 80px 40px; /* I need more space around on the tablet view */
+    }
+    label {
+      display: block; /* On my site labels must be in block */
+      color: $mint;
+      background-color: $navyblue;
+      /* The background-color for my labels */
+      padding: 5px 0;
+      /* The space inside my labels */
+    }
+    input[type='text'],
+    textarea {
+      width: 100%;
+      height: 40px;
+      /* In mobile and tablet version the width of the text areas must be 100% */
+      border: none; /* I do not need its borders */ /* Gradient for the background */
+      background: linear-gradient(90deg, $mint, $white, $mint);
+      font-size: 1.2rem; /* The size of the text */
+    }
+    input[type='text']:focus,
+    textarea:focus {
+      background: $mint;
+      /* The color of the background will be changed for a lightgreen when you are typing */
+    }
+    fieldset {
+      border: none; /* No borders for the fieldsets */
+    }
+    /* The style for the Submit-button */
+    input[type='submit'] {
+      /* Gradient for the background */
+      background: linear-gradient(90deg, $navyblue, #92278f, $navyblue);
+      cursor: pointer; /* The cursor will be changed on the hover */
+      color: $white;
+      border: 1px solid $white;
+      padding: 0.7rem;
+      /* The size for the Submit-button */
+      float: right; /* The place for the Submit-button */
+      font-size: 1.2rem;
+      /* The size for the text on the Submit-button */
+      font-weight: medium;
+      margin-right: 12px;
+      /* I need more space on the right */
+      width: 50%;
+    }
+    textarea {
+      /* The height for the textarea */
+      height: 70px;
+    }
+  }
   table {
-    /* The size and space for the table */
+    /* The size and space for the Table with prices */
     width: 90%;
     margin: 0 auto;
+    /* Centering the table */
     margin-bottom: 50px;
+    /* I need more space on the bottom */
     margin-top: 30px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    /* I need more space on the right */
+    letter-spacing: 0.5px; /* More space between the letters */
+    text-transform: uppercase; /* All letters are Uppercase */
     text-align: left;
     box-shadow: 5px 5px 15px;
-    @media screen and (min-width: 500px) {
-      width: 80%;
+    @media screen and (min-width: 560px) {
+      width: 70%;
+      font-size: 1.25rem;
+      margin-top: 90px; /* I need more space around on the tablet view */
     }
     th {
       /* The first row */
@@ -195,134 +305,128 @@ footer {
       color: $mint;
     }
     tbody td {
-      /* All other text cells */
+      /* All other text cells, text color */
       color: $purple;
-    }
-    th,
-    td {
-      /* The size and border for cells */
-      min-width: 80px;
     }
     th,
     td,
     tr {
       /* The space inside each cell */
       padding: 10px;
+      @media screen and (min-width: 560px) {
+        padding-left: 20px; /*  */
+      }
     }
-
     tr:nth-child(odd) {
       background: linear-gradient(90deg, $mint, $white);
+      /* Gradient for the background on every odd cell */
     }
     tr:nth-child(even) {
       background-color: $lightmint;
+      /* Color for the background on every even cell */
     }
   }
   .left > p {
-    margin-top: 80px;
+    /* This is the text in address */
+    margin-top: 50px; /* Extra space on the top */
     font-size: 1.2rem;
+    padding: 0 0 40px 50px; /* Extra space on the bottom, inside */
+    @media screen and (min-width: 560px) {
+      padding: 50px 50px 50px 80px; /* I need more space around on the tablet view */
+      font-size: 1.3rem; /* The size for the text for this layout */
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 1.5rem; /* The size for the text for this layout */
+    }
   }
   p {
-    padding-left: 30px;
-    font-size: 1.2rem;
+    /* This is the text in the article */
+    font-size: 1.1rem; /* The size for the text */
     line-height: 2rem;
-    font-weight: 500;
-    @media screen and (min-width: 500px) {
+    font-weight: 550;
+    @media screen and (min-width: 560px) {
       text-align: left;
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 1.15rem; /* The size for the text for this layout */
+      line-height: 1.5; /* The size for the text for this layout */
+      padding: 0 0 40px 30px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 1.45rem; /* The size for the text for this layout */
     }
   }
 }
-.col3 {
-  overflow: hidden; /* Overflow is hiding protruding parts of images */
-  text-align: center;
+.container3img {
+  /* This is the container for 3 pictures and text on the Home Page */
+  margin: 0 auto; /* Centering the container */
   width: 100%;
+  .list {
+    /* This is the style for the list-items */
+    text-align: left;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 auto;
+    justify-items: center;
+    @media screen and (min-width: 1024px) {
+      font-size: 1.15rem;
+    }
+  }
+  p {
+    font-weight: 600; /* I need bold text */
+    @media screen and (min-width: 560px) {
+      text-align: left;
+      line-height: 1.5; /* The size for the text for this layout */
+    }
+  }
+}
+.threeColumns {
+  /* The container for the picture and text */
+  overflow: hidden; /* Overflow is hiding protruding parts of images */
+  text-align: center; /* The text will be centered */
+  float: left;
+  margin-bottom: 20px;
   transition: 600ms all ease-in; /* Resizing will be more smooth. */
-  flex-grow: 1;
-  @media screen and (min-width: 500px) {
-    width: 30%;
-    padding: 30px;
+  @media screen and (min-width: 560px) {
+    width: 33.3333%;
+    padding: 30px; /* I need more space around on the tablet view */
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 70px;
   }
   h2 {
     margin: 0;
-    color: $purple;
+    color: $purple; /* The color for the text */
+    /* Gradient for the background */
     background: linear-gradient(90deg, $mint, $white, $mint);
+    @media screen and (min-width: 560px) {
+      font-size: 1.3rem;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 1.7rem;
+    }
   }
   p {
-    text-align: center;
-    padding: 10px;
+    text-align: center; /* The layout for the text */
+    padding: 10px; /* The space for the text */
+    margin: 0;
+    @media screen and (min-width: 560px) {
+      font-size: 1.15rem; /* The size for the text for this layout */
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 1.4rem; /* The size for the text for this layout */
+    }
   }
 }
-
-form {
-  background-color: $navyblue; /* The background color for my form */
-  margin: 25px 0; /* The margin around the form */
-  padding: 15px; /* The space inside the form */
-  @media screen and (min-width: 500px) {
-    margin: 25px;
-    margin-bottom: 80px;
-  }
-  label {
-    display: block; /* In my mobile version labels must be in block */
-    color: $mint;
-    background-color: $navyblue;
-    /* The background-color for my labels */
-    padding: 5px 0;
-    /* The space inside my labels */
-  }
-  input[type='text'],
-  textarea {
-    width: 100%;
-    height: 40px;
-    /* In mobile and tablet version the width of the text areas must be 100% */
-    border: none; /* I do not need its borders */
-    background: linear-gradient(90deg, $mint, $white, $mint);
-    font-size: 1.2rem;
-    /* The size of the text areas */
-  }
-  input[type='text']:focus,
-  textarea:focus {
-    background: $mint; /* The color of the background will be changed for a lightgreen when you are typing */
-  }
-  fieldset {
-    border: none;
-    /* No borders for the fieldsets */
-  }
-  input[type='submit'] {
-    /* The color for the Submit-button */
-    background: linear-gradient(90deg, $navyblue, #92278f, $navyblue);
-    cursor: pointer; /* The cursor will change its view */
-    color: $white;
-    border: 1px solid $white;
-    padding: 0.7rem; /* The size for the Submit-button */
-    float: right; /* The place for the Submit-button */
-    font-size: 1.2rem;
-    /* The size for the text on the Submit-button */
-    font-weight: medium;
-    margin-right: 12px;
-    width: 50%;
-    //border: none;
-  }
-  textarea {
-    /* The height for the textarea */
-    height: 70px;
-  }
-}
-
-picture,
 img {
-  width: 100%; /* The size of the pictures */
+  /* The style of the pictures */
+  width: 100%;
   display: flex;
+  /* Flex layout */
   justify-content: row;
-  @media screen and (min-width: 500px) {
-    display: flex;
-    justify-content: row;
-  }
 }
-
 .baner {
   display: none;
-  @media screen and (min-width: 500px) {
-    display: inline-block;
+  /* The baner will be unvisible on the mobile view */
+  @media screen and (min-width: 560px) {
+    display: inline-block; /* And visible on the tablet and descktop */
   }
 }

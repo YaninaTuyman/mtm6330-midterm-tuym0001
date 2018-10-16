@@ -11,12 +11,7 @@ html {
 }
 
 /* Colors */
-$purple: hsl(274, 53%, 37%);
-$navyblue: hsl(238, 50%, 13%);
-$mint: hsl(180, 50%, 60%);
-$lightmint: hsl(187, 52%, 88%);
 $white: hsl(0, 0%, 100%);
-$grayblue: hsl(225, 26%, 88%);
 
 body {
   background-color: $white;
@@ -27,7 +22,6 @@ body {
   line-height: 1.64rem;
   margin: 0;
   padding: 0;
-  max-width: 1000px;
 }
 
 h1,
@@ -53,14 +47,4 @@ article {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-ol,
-ul {
-  list-style: none;
-}
-.clearfix:after {
-  /* Clears the elements */
-  content: '';
-  display: table;
-  clear: both;
 }

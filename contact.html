@@ -8,28 +8,32 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
-  <title>Navbar Demo</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <title>Yanina Tuyman Midterm Project - Contact Page</title>
 </head>
 
 <body>
   <div class="navbar">
+    <!-- The picture for the logo -->
     <div class="logo">
       <img src="img/logoMoonHair.png" alt="Logo Moon Hair">
     </div>
+    <!-- Navigation -->
     <nav class="nav">
       <div class="menu-item"><a href="index.html">Home</a></div>
       <div class="menu-item"><a href="about.html">About</a></div>
-      <div class="menu-item"><a href="contact.html">Contact</a></div>
+      <div class="menu-item active"><a href="contact.html">Contact</a></div>
     </nav>
   </div>
 
+  <!-- The baner on the top is visible on the tablet and descktop views -->
   <div class="baner">
     <img src="img/backLaptop3.jpg" alt="banner3">
   </div>
 
-  <div class="container3img">
+  <div class="container2img">
     <!-- Main content of the page -->
-    <div class="col2 right">
+    <div class="twoColumns right">
       <h1>Contact Us</h1>
       <!-- The first column -->
       <form>
@@ -50,9 +54,9 @@
         <input type="submit" value="Submit">
       </form>
     </div>
-    <div class="col2 left">
-      <!-- The second column -->
 
+    <div class="twoColumns left">
+      <!-- The second column -->
       <p>
         Moon Hair</br>
         (Beauty and Style Saloon)</br>
@@ -65,13 +69,44 @@
     </div>
   </div>
   <footer>
-    <div class="footerImg">
+    <!-- This is the Back-to-Top arrow -->
+    <a href="#top"><i class="fas fa-arrow-circle-up"></i></a>
+    <div>
+      <!-- Social Media icons -->
       <i class="fab fa-facebook"></i>
       <i class="fab fa-instagram""></i>
       <i class=" fab fa-twitter-square"></i>
     </div>
-    <p>&copy; Moon Hair. All Rights Reserved. Designed by Yanina Tuyman</p> <!-- Copirights -->
+    <!-- Copirights -->
+    <p>&copy; Moon Hair. All Rights Reserved. Designed by Yanina Tuyman</p>
   </footer>
+
+  <!-- Some Javascript -->
+  <script>
+    /* Applying active style to the menu-items */
+    const initMenu = function () {
+      const menuItems = document.querySelectorAll('.menu-item')
+      menuItems.forEach(item => {
+        item.addEventListener('click', event => {
+          menuItems.forEach(item => {
+            item.classList.remove('active')
+          })
+          event.target.classList.add('active')
+        })
+      })
+    }
+    initMenu()
+
+    /* Smooth page movement to the desired block */
+    $(document).ready(function () {
+      $("a").click(function () {
+        elementClick = $(this).attr("href");
+        destination = $(elementClick).offset().top;
+        $("body,html").animate({ scrollTop: destination }, 1000);
+      });
+    });
+  </script>
+
 </body>
 
 </html>
