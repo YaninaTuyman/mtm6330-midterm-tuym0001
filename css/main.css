@@ -1,0 +1,842 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/* Baseline reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/* Colors */
+body {
+  background-color: white;
+  color: rgba(31, 29, 41, 0.935);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Calibri', 'Roboto', 'Fira Sans', 'Helvetica Neue', sans-serif;
+  font-size: 100%;
+  line-height: 1.64rem;
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', 'Fira Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase; }
+
+article {
+  text-align: center; }
+  article p {
+    padding: 20px; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Global Sass variables */
+/* Colors */
+body {
+  max-width: 1400px;
+  /* Max width for the Descktop view */
+  margin: 0 auto;
+  /* Centering the body */ }
+  body a {
+    text-decoration: none;
+    /* No underlined links in my case */ }
+
+.navbar {
+  /* Navigational bar */
+  /* The height for the Navigation on the mobile view */
+  align-items: center;
+  /* Centering the items in the navbar */
+  background-color: white;
+  /* Color for the background */
+  border-bottom: 3px solid #d8dce8;
+  /* The line under the navbar */
+  display: flex;
+  /* Flex layout */
+  height: 70px; }
+  @media screen and (min-width: 560px) {
+    .navbar {
+      height: 90px;
+      /* The height for the Navigation on the tablet view */ } }
+  @media screen and (min-width: 1024px) {
+    .navbar {
+      height: 100px;
+      /* The height for the Navigation on the descktop view */ } }
+  .navbar::before {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    /* No space on the top */
+    width: 100%; }
+  .navbar .logo {
+    /* Container for the Logo */
+    align-items: center;
+    /* Centering the logo in its contaner */
+    display: flex;
+    /* Flex layout */
+    flex-grow: 1;
+    /* The elements grow to fill the size of their container */
+    height: 100%;
+    padding-left: 1rem;
+    /* The space on the left side of the logo */ }
+    .navbar .logo img {
+      /* The Logo */
+      height: 40px;
+      /* The height for the logo */
+      width: auto;
+      /* The width for the logo will be auto */ }
+      @media screen and (min-width: 560px) {
+        .navbar .logo img {
+          margin-left: 10px;
+          /* I need more space on the left */
+          height: 50px;
+          /* The height for the logo on the tablet view */ } }
+      @media screen and (min-width: 1024px) {
+        .navbar .logo img {
+          height: 60px;
+          /* The height for the logo on the descktop view */ } }
+  .navbar .nav {
+    /* The Menu */
+    display: flex;
+    /* Flex layout */
+    flex-grow: 1;
+    /* The elements grow to fill the size of their container */
+    justify-content: space-between;
+    /* The space between menu-items */
+    align-items: center;
+    /* Centering the items */
+    height: 100%; }
+    @media screen and (min-width: 560px) {
+      .navbar .nav {
+        max-width: 450px;
+        /* The width of the menu on the tablet view */ } }
+  .navbar .menu-item {
+    /* The words in the Menu */
+    align-items: center;
+    /* Centering the items */
+    border-bottom: 2px solid transparent;
+    display: flex;
+    /* Flex layout */
+    flex-grow: 1;
+    /* The elements grow to fill the size of their container */
+    height: 100%;
+    justify-content: center;
+    /* Centering the items */
+    letter-spacing: 0.5px;
+    /* More space between the words */
+    text-transform: uppercase;
+    /* Style for the words */
+    /* Psudo class will be applied by the browser when the element is hovered */
+    /* Psudo class will be applied by the browser when element is clicked */ }
+    .navbar .menu-item a {
+      /* Psudo class will be applied by the browser when the element is hovered */ }
+      .navbar .menu-item a:hover {
+        color: #d91c5b;
+        /* Pink color on the hover style */ }
+      @media screen and (min-width: 560px) {
+        .navbar .menu-item a {
+          padding-top: 30px;
+          /* I need more space on the top */
+          font-size: 1.3rem;
+          /* The size of the "menu-words" on the tablet view */ } }
+      @media screen and (min-width: 1024px) {
+        .navbar .menu-item a {
+          padding-top: 40px;
+          /* I need more space on the top */
+          font-size: 1.5rem;
+          /* The size of the "menu-words" on the tablet view */ } }
+    .navbar .menu-item:hover {
+      background-color: #d8dce8;
+      /* Gray-blue color for the background on the hover style */
+      border-bottom: 2px solid #652c90;
+      /* Purple color for the border on the hover style */
+      cursor: pointer;
+      /* The cursor will be changed on the hover */ }
+    .navbar .menu-item:active, .navbar .menu-item.active {
+      border-color: #66cccc; }
+
+footer {
+  /* Footer */
+  background-color: #111232;
+  /* The color for the background */
+  padding: 10px;
+  /* The space inside the footer */
+  justify-content: center;
+  /* Centering the items */
+  display: flex;
+  /* Flex layout */
+  flex-direction: column;
+  /* Vertical layout for the items */
+  align-items: center;
+  /* Centering the items */
+  clear: both;
+  font-size: 0.8rem;
+  /* The size for the text */ }
+  footer .fab {
+    /* Social Media Icons */
+    font-size: 2.5rem;
+    /* The size for the social media icons */
+    margin: 10px 15px;
+    /* The space around the icons */
+    color: #66cccc;
+    /* The color for the social media icons */
+    justify-content: center;
+    /* Centering the items */
+    text-align: center;
+    /* Centering the text */ }
+    @media screen and (min-width: 560px) {
+      footer .fab {
+        margin: 10px 20px;
+        /* I need more space around the icons on the tablet view */ } }
+    @media screen and (min-width: 1024px) {
+      footer .fab {
+        margin: 10px 30px;
+        /* I need more space around the icons on the descktop view */ } }
+  footer p {
+    /* This is the style for the Copyright */
+    text-align: center;
+    /* Centering the text */
+    line-height: 1rem;
+    /* The size for the text */
+    color: #66cccc;
+    /* The color for the text */
+    margin-top: 10px;
+    /* I need more space on the top */ }
+  footer a {
+    /* This is the style for the Back-to-Top arrow */
+    color: #92278f;
+    /* The color for the arrow */
+    font-size: 2rem;
+    /* The size for the arrow */
+    margin: 10px;
+    /* The space around the arrow */ }
+
+.contentMobile {
+  /* This image and three words will be visible just on the mobile view */
+  background-image: url(img/backMobile.jpg);
+  /* Image under the Menu */
+  background-repeat: no-repeat;
+  /* I need this image just ones */
+  background-size: 100%;
+  /* Image will cover the background from side to side */
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* I have words on the top of the image. This is the positioning the items */
+  padding: 0 0 45px 0;
+  /* The space around */
+  background: #111232;
+  /* Blue color for the background */ }
+  @media screen and (min-width: 560px) {
+    .contentMobile {
+      background-color: transparent;
+      display: none;
+      /* This picture will be visible just on mobile view */ } }
+  .contentMobile .word1,
+  .contentMobile .word2,
+  .contentMobile .word3 {
+    color: #652c90;
+    /* The space around */
+    /* Gradient for the background */
+    background: linear-gradient(90deg, #66cccc, white, #66cccc);
+    font-size: 1.6rem;
+    /* The size for the text */
+    float: right;
+    /* The layout for the text */
+    width: 65%;
+    /* The size for the block */
+    padding: 13px 20px;
+    /* The space inside the element */
+    position: absolute;
+    /* I have words on the top of the image. This is the positioning the items */
+    margin-bottom: 15px;
+    /* Extra space on the bottom */
+    left: 50%;
+    /* The position */ }
+    @media screen and (min-width: 560px) {
+      .contentMobile .word1,
+      .contentMobile .word2,
+      .contentMobile .word3 {
+        display: none;
+        /* These words will be visible just on mobile view */ } }
+  .contentMobile .word1 {
+    top: 40%;
+    /* Layout for the first word */ }
+  .contentMobile .word2 {
+    top: 55%;
+    /* Layout for the second word */ }
+  .contentMobile .word3 {
+    top: 70%;
+    /* Layout for the third word */ }
+
+.container2img {
+  /* The main container for two columns layout  */
+  margin: 0 auto;
+  /* Centering the container */
+  width: 100%; }
+  @media screen and (min-width: 560px) {
+    .container2img {
+      display: flex;
+      /* Flex layout */ } }
+  .container2img .twoColumns {
+    /* Two Column Equal Spaced Layout */
+    width: 100%;
+    /* The width for the columns */
+    transition: 600ms all ease-in;
+    /* Resizing will be smoother. */ }
+    @media screen and (min-width: 560px) {
+      .container2img .twoColumns {
+        padding: 0 0 0 20px;
+        /* I need more space around on the tablet view */ } }
+    @media screen and (min-width: 1024px) {
+      .container2img .twoColumns {
+        padding: 70px;
+        /* I need more space around on the descktop view */ } }
+    .container2img .twoColumns h1 {
+      font-size: 1.5rem;
+      /* Size for the text */
+      background-color: #111232; }
+      @media screen and (min-width: 560px) {
+        .container2img .twoColumns h1 {
+          color: #d91c5b;
+          /* Another color on the tablet view */
+          background: none;
+          /* No background on the tablet view */
+          padding-left: 30px;
+          /* I need more space around on the tablet view */ } }
+      @media screen and (min-width: 1024px) {
+        .container2img .twoColumns h1 {
+          font-size: 1.7rem;
+          /* Size for the text on the descktop view */ } }
+  .container2img form {
+    /* This is the style for the Contact Form */
+    background-color: #111232;
+    /* The background color for my form */
+    margin: 25px;
+    /* The margin around the form */
+    padding: 15px;
+    /* The space inside the form */
+    /* The style for the Submit-button */ }
+    @media screen and (min-width: 560px) {
+      .container2img form {
+        margin: 25px 0 80px 40px;
+        /* I need more space around on the tablet view */ } }
+    .container2img form label {
+      display: block;
+      /* On my site labels must be in block */
+      color: #66cccc;
+      background-color: #111232;
+      /* The background-color for my labels */
+      padding: 5px 0;
+      /* The space inside my labels */ }
+    .container2img form input[type='text'],
+    .container2img form textarea {
+      width: 100%;
+      height: 40px;
+      /* In mobile and tablet version the width of the text areas must be 100% */
+      border: none;
+      /* I do not need its borders */
+      /* Gradient for the background */
+      background: linear-gradient(90deg, #66cccc, white, #66cccc);
+      font-size: 1.2rem;
+      /* The size of the text */ }
+    .container2img form input[type='text']:focus,
+    .container2img form textarea:focus {
+      background: #66cccc;
+      /* The color of the background will be changed for a lightgreen when you are typing */ }
+    .container2img form fieldset {
+      border: none;
+      /* No borders for the fieldsets */ }
+    .container2img form input[type='submit'] {
+      /* Gradient for the background */
+      background: linear-gradient(90deg, #111232, #92278f, #111232);
+      cursor: pointer;
+      /* The cursor will be changed on the hover */
+      color: white;
+      border: 1px solid white;
+      padding: 0.7rem;
+      /* The size for the Submit-button */
+      float: right;
+      /* The place for the Submit-button */
+      font-size: 1.2rem;
+      /* The size for the text on the Submit-button */
+      font-weight: medium;
+      margin-right: 12px;
+      /* I need more space on the right */
+      width: 50%; }
+    .container2img form textarea {
+      /* The height for the textarea */
+      height: 70px; }
+  .container2img table {
+    /* The size and space for the Table with prices */
+    width: 90%;
+    margin: 0 auto;
+    /* Centering the table */
+    margin-bottom: 50px;
+    /* I need more space on the bottom */
+    margin-top: 30px;
+    /* I need more space on the right */
+    letter-spacing: 0.5px;
+    /* More space between the letters */
+    text-transform: uppercase;
+    /* All letters are Uppercase */
+    text-align: left;
+    box-shadow: 5px 5px 15px; }
+    @media screen and (min-width: 560px) {
+      .container2img table {
+        width: 70%;
+        font-size: 1.25rem;
+        margin-top: 90px;
+        /* I need more space around on the tablet view */ } }
+    .container2img table th {
+      /* The first row */
+      background-color: #111232;
+      border: 2px solid #66cccc;
+      color: #66cccc; }
+    .container2img table tbody td {
+      /* All other text cells, text color */
+      color: #652c90; }
+    .container2img table th,
+    .container2img table td,
+    .container2img table tr {
+      /* The space inside each cell */
+      padding: 10px; }
+      @media screen and (min-width: 560px) {
+        .container2img table th,
+        .container2img table td,
+        .container2img table tr {
+          padding-left: 20px;
+          /*  */ } }
+    .container2img table tr:nth-child(odd) {
+      background: linear-gradient(90deg, #66cccc, white);
+      /* Gradient for the background on every odd cell */ }
+    .container2img table tr:nth-child(even) {
+      background-color: #d0edf0;
+      /* Color for the background on every even cell */ }
+  .container2img .left > p {
+    /* This is the text in address */
+    margin-top: 50px;
+    /* Extra space on the top */
+    font-size: 1.2rem;
+    padding: 0 0 40px 50px;
+    /* Extra space on the bottom, inside */ }
+    @media screen and (min-width: 560px) {
+      .container2img .left > p {
+        padding: 50px 50px 50px 80px;
+        /* I need more space around on the tablet view */
+        font-size: 1.3rem;
+        /* The size for the text for this layout */ } }
+    @media screen and (min-width: 1024px) {
+      .container2img .left > p {
+        font-size: 1.5rem;
+        /* The size for the text for this layout */ } }
+  .container2img p {
+    /* This is the text in the article */
+    font-size: 1.1rem;
+    /* The size for the text */
+    line-height: 2rem;
+    font-weight: 550; }
+    @media screen and (min-width: 560px) {
+      .container2img p {
+        text-align: left;
+        font-size: 1.15rem;
+        /* The size for the text for this layout */
+        line-height: 1.5;
+        /* The size for the text for this layout */
+        padding: 0 0 40px 30px; } }
+    @media screen and (min-width: 1024px) {
+      .container2img p {
+        font-size: 1.45rem;
+        /* The size for the text for this layout */ } }
+
+.container3img {
+  /* This is the container for 3 pictures and text on the Home Page */
+  margin: 0 auto;
+  /* Centering the container */
+  width: 100%; }
+  .container3img .list {
+    /* This is the style for the list-items */
+    text-align: left;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 auto;
+    justify-items: center; }
+    @media screen and (min-width: 1024px) {
+      .container3img .list {
+        font-size: 1.15rem; } }
+  .container3img p {
+    font-weight: 600;
+    /* I need bold text */ }
+    @media screen and (min-width: 560px) {
+      .container3img p {
+        text-align: left;
+        line-height: 1.5;
+        /* The size for the text for this layout */ } }
+
+.threeColumns {
+  /* The container for the picture and text */
+  overflow: hidden;
+  /* Overflow is hiding protruding parts of images */
+  text-align: center;
+  /* The text will be centered */
+  float: left;
+  margin-bottom: 20px;
+  transition: 600ms all ease-in;
+  /* Resizing will be more smooth. */ }
+  @media screen and (min-width: 560px) {
+    .threeColumns {
+      width: 33.3333%;
+      padding: 30px;
+      /* I need more space around on the tablet view */ } }
+  @media screen and (min-width: 1024px) {
+    .threeColumns {
+      padding: 70px; } }
+  .threeColumns h2 {
+    margin: 0;
+    color: #652c90;
+    /* The color for the text */
+    /* Gradient for the background */
+    background: linear-gradient(90deg, #66cccc, white, #66cccc); }
+    @media screen and (min-width: 560px) {
+      .threeColumns h2 {
+        font-size: 1.3rem; } }
+    @media screen and (min-width: 1024px) {
+      .threeColumns h2 {
+        font-size: 1.7rem; } }
+  .threeColumns p {
+    text-align: center;
+    /* The layout for the text */
+    padding: 10px;
+    /* The space for the text */
+    margin: 0; }
+    @media screen and (min-width: 560px) {
+      .threeColumns p {
+        font-size: 1.15rem;
+        /* The size for the text for this layout */ } }
+    @media screen and (min-width: 1024px) {
+      .threeColumns p {
+        font-size: 1.4rem;
+        /* The size for the text for this layout */ } }
+
+img {
+  /* The style of the pictures */
+  width: 100%;
+  display: flex;
+  /* Flex layout */
+  justify-content: row; }
+
+.baner {
+  display: none;
+  /* The baner will be unvisible on the mobile view */ }
+  @media screen and (min-width: 560px) {
+    .baner {
+      display: inline-block;
+      /* And visible on the tablet and descktop */ } }

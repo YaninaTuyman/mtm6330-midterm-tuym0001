@@ -10,9 +10,12 @@ html {
   box-sizing: inherit;
 }
 
+/* Colors */
+$white: hsl(0, 0%, 100%);
+
 body {
-  background-color: #ffffff;
-  color: rgba(0, 0, 0, 0.78);
+  background-color: $white;
+  color: rgba(31, 29, 41, 0.935);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Calibri', 'Roboto',
     'Fira Sans', 'Helvetica Neue', sans-serif;
   font-size: 100%;
@@ -29,13 +32,11 @@ h5,
 h6 {
   font-family: 'Roboto', 'Fira Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(238, 50%, 13%);
+  color: $white;
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
 }
-
 article {
   text-align: center;
   p {
@@ -46,14 +47,4 @@ article {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-ol,
-ul {
-  list-style: none;
-}
-.clearfix:after {
-  /* Clears the elements */
-  content: '';
-  display: table;
-  clear: both;
 }
